@@ -1,24 +1,10 @@
-# Module 8: Introduction to Data Frames
+# Introduction to Data Frames
 
-## Overview
 In this module, we'll begin working with data frame objects, which are the primary data storage type used in R. In many ways, data frames are similar to a two-dimensional row/column layout that you should be familiar with from spreadsheet programs like Microsoft Excel. This module will cover various ways of creating Data frames, and describe how they are related to other data types in R.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
 
-- [Resources](#resources)
-- [Lists](#lists)
-- [Data Frames](#data-frames)
-  - [Creating Data Frames](#creating-data-frames)
-  - [Describing Dataframes](#describing-dataframes)
-  - [Accessing Data in Data Frames](#accessing-data-in-data-frames)
-- [Reading CSV Data](#reading-csv-data)
-  - [Factor Variables](#factor-variables)
+Helpful links:
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Resources
 - [Intro to Lists - R Tutor](http://www.r-tutor.com/r-introduction/list)
 - [List Basics - R Bloggers](https://www.r-bloggers.com/basics-of-lists/)
 - [Single v.s. double brackets - StackOverflow](http://stackoverflow.com/questions/1169456/in-r-what-is-the-difference-between-the-and-notations-for-accessing-the)
@@ -66,7 +52,7 @@ Both of these approaches are more clear, enhancing code readability (and writabi
 ## Data Frames
 As stated above, data frames are really just lists with some additional properties that make them well suited for working with data. More specifically, data frames are lists in which each element is a **vector of the same length**. To relate this to the familiar row/column layout of a 2-dimensional table, each _vector_ in your data frame is a _column_ of your table. For example, consider the following table of weights and heights:
 
-![screenshot of a table of weight and height](imgs/table-ss.png)
+![screenshot of a table of weight and height](m10-imgs/table-ss.png)
 
 You can think of this as a **list** of two **vectors**: `height` and `weight`. It makes sense that the vectors are **columns, not rows**, because a row of data may contain elements of different types (and vectors are collections of elements all of the same type).
 
@@ -152,11 +138,11 @@ shirt.sizes.factor <- as.factor(shirt.sizes)
 
 When you print out the `shirt.sizes.factor` variable, R still (intelligently) prints out the **labels** that you are presumably interested in. It also indicates the **levels**, which are the _only_ possible values that elements can take on.
 
-![screenshot of factor variable](imgs/factor-ss.png)
+![screenshot of factor variable](m10-imgs/factor-ss.png)
 
 As you can see, if you attempt to assign a new value, R will assign it `NA` and produce an error message:
 
-![screenshot of factor variable error](imgs/factor-error-ss.png)
+![screenshot of factor variable error](m10-imgs/factor-error-ss.png)
 
 All of this is to say, when you use the `read.csv` function, it will **interpret strings as factors by default**. This is good for memory and various statistical analyses, but it will likely confuse your data processing. As a results, make sure to specify the following argument in your `read.csv` function:
 

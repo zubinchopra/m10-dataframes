@@ -47,7 +47,7 @@ name <- person1$name  # `$` notation
 name <- person1[['name']]  # using double brackets and element name
 ```
 
-Both of these approaches are more clear, enhancing code readability (and writability, for that matter). For practice working with lists, see [exercise-1](exercise-1).
+Both of these approaches are more clear, enhancing code readability (and writability, for that matter). For practice working with lists, see [exercise-1](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-1).
 
 ## Data Frames
 As stated above, data frames are really just lists with some additional properties that make them well suited for working with data. More specifically, data frames are lists in which each element is a **vector of the same length**. To relate this to the familiar row/column layout of a 2-dimensional table, each _vector_ in your data frame is a _column_ of your table. For example, consider the following table of weights and heights:
@@ -111,7 +111,7 @@ The section above already covered methods for retrieving data frame columns usin
 | `data[row.nums, ]` | `data[2:4,]`                 | Retrieve all columns and the second through fourth rows |
 | `data[, col.name]`| `data[,'height']`  | Retrieve all rows and only the `height` column |
 
-For practice retrieving information and manipulating data frames, see [exercise-2](exercise-2) and [exercise-3](exercise-3).
+For practice retrieving information and manipulating data frames, see [exercise-2](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-2) and [exercise-3](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-3).
 
 ## Reading CSV Data
 While R is equipped to ingest a variety of different forms of data, in this module we'll focus on reading in tabular data in **comma separated value** (csv) format. Most spreadsheet programs like Microsoft Excel, Numbers, or Google Sheets are simply interfaces for formatting and interacting with data that is saved in a format like `.csv` files. These programs easily import and export `.csv` files, however `.csv` files are unable to save the formatting done in those programs (the files only store the data, separated by commas).
@@ -151,4 +151,4 @@ All of this is to say, when you use the `read.csv` function, it will **interpret
 my.data <- read.csv('file_name.csv', stringsAsFactors = FALSE)
 ```
 
-For practice reading and working with data, see [exercise-4](exercise-4) and [exercise-5](exercise-5).
+For practice reading and working with data, see [exercise-4](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-4) and [exercise-5](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-5).

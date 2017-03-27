@@ -1,24 +1,10 @@
-# Module 8: Introduction to Data Frames
+# Introduction to Data Frames
 
-## Overview
 In this module, we'll begin working with data frame objects, which are the primary data storage type used in R. In many ways, data frames are similar to a two-dimensional row/column layout that you should be familiar with from spreadsheet programs like Microsoft Excel. This module will cover various ways of creating Data frames, and describe how they are related to other data types in R.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
 
-- [Resources](#resources)
-- [Lists](#lists)
-- [Data Frames](#data-frames)
-  - [Creating Data Frames](#creating-data-frames)
-  - [Describing Dataframes](#describing-dataframes)
-  - [Accessing Data in Data Frames](#accessing-data-in-data-frames)
-- [Reading CSV Data](#reading-csv-data)
-  - [Factor Variables](#factor-variables)
+Helpful links:
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Resources
 - [Intro to Lists - R Tutor](http://www.r-tutor.com/r-introduction/list)
 - [List Basics - R Bloggers](https://www.r-bloggers.com/basics-of-lists/)
 - [Single v.s. double brackets - StackOverflow](http://stackoverflow.com/questions/1169456/in-r-what-is-the-difference-between-the-and-notations-for-accessing-the)
@@ -61,12 +47,12 @@ name <- person1$name  # `$` notation
 name <- person1[['name']]  # using double brackets and element name
 ```
 
-Both of these approaches are more clear, enhancing code readability (and writability, for that matter). For practice working with lists, see [exercise-1](exercise-1).
+Both of these approaches are more clear, enhancing code readability (and writability, for that matter). For practice working with lists, see [exercise-1](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-1).
 
 ## Data Frames
 As stated above, data frames are really just lists with some additional properties that make them well suited for working with data. More specifically, data frames are lists in which each element is a **vector of the same length**. To relate this to the familiar row/column layout of a 2-dimensional table, each _vector_ in your data frame is a _column_ of your table. For example, consider the following table of weights and heights:
 
-![screenshot of a table of weight and height](imgs/table-ss.png)
+![screenshot of a table of weight and height](m10-imgs/table-ss.png)
 
 You can think of this as a **list** of two **vectors**: `height` and `weight`. It makes sense that the vectors are **columns, not rows**, because a row of data may contain elements of different types (and vectors are collections of elements all of the same type).
 
@@ -125,7 +111,7 @@ The section above already covered methods for retrieving data frame columns usin
 | `data[row.nums, ]` | `data[2:4,]`                 | Retrieve all columns and the second through fourth rows |
 | `data[, col.name]`| `data[,'height']`  | Retrieve all rows and only the `height` column |
 
-For practice retrieving information and manipulating data frames, see [exercise-2](exercise-2) and [exercise-3](exercise-3).
+For practice retrieving information and manipulating data frames, see [exercise-2](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-2) and [exercise-3](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-3).
 
 ## Reading CSV Data
 While R is equipped to ingest a variety of different forms of data, in this module we'll focus on reading in tabular data in **comma separated value** (csv) format. Most spreadsheet programs like Microsoft Excel, Numbers, or Google Sheets are simply interfaces for formatting and interacting with data that is saved in a format like `.csv` files. These programs easily import and export `.csv` files, however `.csv` files are unable to save the formatting done in those programs (the files only store the data, separated by commas).
@@ -152,11 +138,11 @@ shirt.sizes.factor <- as.factor(shirt.sizes)
 
 When you print out the `shirt.sizes.factor` variable, R still (intelligently) prints out the **labels** that you are presumably interested in. It also indicates the **levels**, which are the _only_ possible values that elements can take on.
 
-![screenshot of factor variable](imgs/factor-ss.png)
+![screenshot of factor variable](m10-imgs/factor-ss.png)
 
 As you can see, if you attempt to assign a new value, R will assign it `NA` and produce an error message:
 
-![screenshot of factor variable error](imgs/factor-error-ss.png)
+![screenshot of factor variable error](m10-imgs/factor-error-ss.png)
 
 All of this is to say, when you use the `read.csv` function, it will **interpret strings as factors by default**. This is good for memory and various statistical analyses, but it will likely confuse your data processing. As a results, make sure to specify the following argument in your `read.csv` function:
 
@@ -165,4 +151,4 @@ All of this is to say, when you use the `read.csv` function, it will **interpret
 my.data <- read.csv('file_name.csv', stringsAsFactors = FALSE)
 ```
 
-For practice reading and working with data, see [exercise-4](exercise-4) and [exercise-5](exercise-5).
+For practice reading and working with data, see [exercise-4](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-4) and [exercise-5](http://github.com/info201-s17/m10-dataframes/tree/master/exercise-5).

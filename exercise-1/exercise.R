@@ -1,9 +1,9 @@
 # Exercise 2: Creating data frames
 
-# Create a vector of the number of points the Seahawks have scored in each game this season (google "Seahawks")
+# Create a vector of the number of points the Seahawks scored the first 4 games of last season
+# Hint: (google "Seahawks scores 2016")
 
-
-# Create a vector of the number of points the Seahwaks have allowed to be scored against them in each game this season
+# Create a vector of the number of points the Seahawks have allowed to be scored against them in the first 4 games
 
 
 # Combine your two vectors into a dataframe
@@ -19,4 +19,3 @@
 
 
 # Assign your dataframe rownames of their opponents
-

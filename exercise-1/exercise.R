@@ -1,4 +1,4 @@
-# Exercise 2: Creating data frames
+# Exercise 1: Creating data frames
 
 # Create a vector of the number of points the Seahawks have scored in each game this season (google "Seahawks")
 points <- c(12, 3, 37, 27)

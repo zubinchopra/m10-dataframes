@@ -1,4 +1,4 @@
-# Exercise 7: Husky Football 2015 Season
+# Exercise 6: Husky Football 2015 Season
 # Read in the Husky Football 2015 game data into a variable called `husky.games.2015`
 husky.games.2015 <- read.csv('data/huskies_2015.csv')
 

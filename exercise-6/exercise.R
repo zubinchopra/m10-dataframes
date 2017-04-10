@@ -1,6 +1,5 @@
-# Exercise 7: Husky Football 2016 Season
+# Exercise 6: Husky Football 2016 Season
 # Read in the Husky Football 2016 game data into a variable called `husky.games.2016`
-
 
 # Create a vector of the teams that the Huskies played against during that season
 # Call this vector `not.huskies`. You'll need to convert this column to a vector
